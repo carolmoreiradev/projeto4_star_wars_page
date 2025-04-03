@@ -1,0 +1,45 @@
+@use 'var';
+
+.hero {
+    background-image: url(../images/millenium_falcon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        background-size: 100%;
+    }
+
+    &__content {
+        padding: 9vw 6vw;
+        
+        @media (max-width: 768px) {
+            padding-top: 50vw;
+            display: block;
+        }
+
+        &__logo {
+            width: 300px;
+
+            @media (max-width: 768px) {
+                max-width: 100vw;
+                width: 100%;
+            }
+        }
+
+        &__info {
+            padding-top: 24px;
+            width: 300px;
+            text-align: center;
+
+                        
+            @media (max-width: 768px) {
+                max-width: 100vw;
+                width: 100%;
+            }
+
+            p {
+                text-shadow: 0 0 1px var.$color3, 0 0 5px var.$color3, 0 0 10px var.$color3;
+            }
+        }
+    }
+}
